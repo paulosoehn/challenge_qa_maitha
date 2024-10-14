@@ -12,7 +12,7 @@ describe('Realizar a validação da ordenação por menor preço', () => {
     cy.get('#sortOrder').select('Preço (Menor para Maior)')
     cy.get('#productsContainer').find('div.product').each(($product) => {
       cy.wrap($product).find('p').last().invoke('text').then((text) => {
-        const precoNumerico = parseFloat(text.replace('Preço: R$', '').replace(',', '.'));
+        const precoNumerico = parseFloat(text.replace('Preço: R$', '').replace(',', '.'));//Captura o texto e transforma em Float
         precos.push(precoNumerico); // 
       });
     }).then(() => {
