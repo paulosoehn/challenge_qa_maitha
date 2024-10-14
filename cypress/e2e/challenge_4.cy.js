@@ -1,4 +1,4 @@
-describe('Validar a Listagem com base na seleção do filtro de Categoria', () => {
+describe('Conferência do Conteúdo do Footer - Modo Claro e Escuro', () => {
 
   beforeEach(() => {
     //Acessar o site da loja
@@ -6,7 +6,7 @@ describe('Validar a Listagem com base na seleção do filtro de Categoria', () =
 
   });
 
-  it('teste2', () => {
+  it('Verificar o Footer da página', () => {
     cy.get('footer p').invoke('text').then((footer) => {
       //Acesso ao modo Escuro
       cy.get('#themeToggleBtn').click()//Dará erro no código pelo modo escuro
